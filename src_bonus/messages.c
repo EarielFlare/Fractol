@@ -6,7 +6,7 @@
 /*   By: cgregory <cgregory@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:20:44 by cgregory          #+#    #+#             */
-/*   Updated: 2022/03/06 16:54:38 by cgregory         ###   ########.fr       */
+/*   Updated: 2022/03/13 21:10:50 by cgregory         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	print_prompt(void)
 {
-	ft_putendl_fd("Usage: ./fractol <name>", 1);
-	ft_putendl_fd("You can specify from 1 to 7 names of fractals", 1);
-	ft_putendl_fd("List of available fractals:", 1);
-	ft_putendl_fd(" ⚬➡️	Julia", 1);
-	ft_putendl_fd(" ⚬➡️	Mandelbrot", 1);
-	ft_putendl_fd(" ⚬➡️	Matka", 1);
-	ft_putendl_fd(" ⚬➡️	Valera", 1);
-	ft_putendl_fd(" ⚬➡️	Islands", 1);
-	ft_putendl_fd(" ⚬➡️	Web", 1);
-	ft_putendl_fd(" ⚬➡️	Lotos", 1);
+	ft_putendl("Usage: ./fractol <name>");
+	ft_putendl("You can specify from 1 to 7 names of fractals");
+	ft_putendl("List of available fractals:");
+	ft_putendl(" ⚬➡️	Julia");
+	ft_putendl(" ⚬➡️	Mandelbrot");
+	ft_putendl(" ⚬➡️	Matka");
+	ft_putendl(" ⚬➡️	Valera");
+	ft_putendl(" ⚬➡️	Islands");
+	ft_putendl(" ⚬➡️	Web");
+	ft_putendl(" ⚬➡️	Lotos");
 }
 
 void	draw_help_1(t_vars *vars)
@@ -50,14 +50,14 @@ void	draw_help_1(t_vars *vars)
 
 void	draw_help_2(t_vars *vars)
 {
-	mlx_string_put(vars->mlx, vars->win, 80, 600, 0x0000FFCC,
+	mlx_string_put(vars->mlx, vars->win, 80, 460, 0x0000FFCC,
 		"Fractal Reset");
-	mlx_string_put(vars->mlx, vars->win, 40, 625, 0x0000FFCC,
+	mlx_string_put(vars->mlx, vars->win, 40, 485, 0x0000FFCC,
 		"Islands reset       - I");
-	mlx_string_put(vars->mlx, vars->win, 40, 650, 0x0000FFCC,
+	mlx_string_put(vars->mlx, vars->win, 40, 510, 0x0000FFCC,
 		"Mandelbrot reset    - M");
-	mlx_string_put(vars->mlx, vars->win, 40, 675, 0x0000FFCC,
+	mlx_string_put(vars->mlx, vars->win, 40, 535, 0x0000FFCC,
 		"Lotos reset         - L");
-	mlx_string_put(vars->mlx, vars->win, 40, 700, 0x0000FFCC,
+	mlx_string_put(vars->mlx, vars->win, 40, 560, 0x0000FFCC,
 		"Web reset           - W");
 }

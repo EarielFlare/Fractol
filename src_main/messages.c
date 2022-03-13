@@ -6,7 +6,7 @@
 /*   By: cgregory <cgregory@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:20:44 by cgregory          #+#    #+#             */
-/*   Updated: 2022/03/06 18:11:58 by cgregory         ###   ########.fr       */
+/*   Updated: 2022/03/13 21:04:14 by cgregory         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	print_prompt(void)
 {
-	ft_putendl_fd("Usage: ./fractol <name>", 1);
-	ft_putendl_fd("You can specify from 1 to 2 names of fractals", 1);
-	ft_putendl_fd("List of available fractals:", 1);
-	ft_putendl_fd(" ⚬➡️	Julia", 1);
-	ft_putendl_fd(" ⚬➡️	Mandelbrot", 1);
+	ft_putendl("Usage: ./fractol <name>");
+	ft_putendl("You can specify from 1 to 2 names of fractals");
+	ft_putendl("List of available fractals:");
+	ft_putendl(" ⚬➡️	Julia");
+	ft_putendl(" ⚬➡️	Mandelbrot");
 }
 
 void	draw_help_1(t_vars *vars)

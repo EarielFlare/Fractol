@@ -6,20 +6,19 @@
 /*   By: cgregory <cgregory@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:25:56 by cgregory          #+#    #+#             */
-/*   Updated: 2022/03/05 21:29:22 by cgregory         ###   ########.fr       */
+/*   Updated: 2022/03/13 21:07:03 by cgregory         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
-# include "../libft/libft.h"
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
 # include <math.h>
 # include <mlx.h>
-# define WIDTH		1000
-# define HEIGHT		800
+# define WIDTH		800
+# define HEIGHT		600
 
 typedef enum s_bool
 {
@@ -117,4 +116,7 @@ void			kbrd_color_check(t_vars *vars, int keycode);
 int				choose_fractol(t_vars *vars, char *str);
 void			print_prompt(void);
 void			draw_help_1(t_vars *vars);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t			ft_strlen(const char *s);
+void			ft_putendl(char *s);
 #endif

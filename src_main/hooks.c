@@ -6,7 +6,7 @@
 /*   By: cgregory <cgregory@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 20:48:48 by cgregory          #+#    #+#             */
-/*   Updated: 2022/03/05 20:06:10 by cgregory         ###   ########.fr       */
+/*   Updated: 2022/03/13 21:18:03 by cgregory         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,9 @@ void	kbrd_color_check(t_vars *vars, int keycode)
 		if (vars->img.pq2 > vars->img.pq1)
 			vars->img.pq1 = vars->img.pq2;
 	}
-	if (keycode == 12)
+	if (keycode == 12 && vars->img.pq2 > 10)
 		vars->img.pq2 = vars->img.pq2 - 1;
-	if (vars->img.pq2 < 10)
-		vars->img.pq2 = 10;
-	if (keycode == 0)
+	if (keycode == 0 && vars->img.pq1 > 10)
 		vars->img.pq1 = vars->img.pq1 - 1;
 	if (vars->img.pq1 < vars->img.pq2)
 		vars->img.pq2 = vars->img.pq1;

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   libft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgregory <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cgregory <cgregory@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 01:43:31 by cgregory          #+#    #+#             */
-/*   Updated: 2021/10/10 20:01:26 by cgregory         ###   ########.fr       */
+/*   Created: 2022/03/13 21:23:00 by cgregory          #+#    #+#             */
+/*   Updated: 2022/03/13 21:23:02 by cgregory         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fractol.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -23,4 +23,32 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	else
 		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	if (s == NULL)
+		return (0);
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+void	ft_putendl(char *s)
+{
+	int	i;
+
+	(void)i;
+	if (s)
+	{
+		while (*s)
+		{
+			i = write(1, s, 1);
+			s++;
+		}
+		i = write(1, "\n", 1);
+	}
 }
